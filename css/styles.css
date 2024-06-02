@@ -79,6 +79,16 @@
   --bs-highlight-bg: #fff3cd;
 }
 
+::-webkit-scrollbar{
+  width: 4px;
+  background-color: #323539;
+}
+
+::-webkit-scrollbar-thumb{
+  background-color: #1abc9c;
+  border-radius: 10px;
+}
+
 *,
 *::before,
 *::after {
