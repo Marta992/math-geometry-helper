@@ -1,10 +1,13 @@
 .calculator-container {
     color: white;
-    background-color: black;
+    background-color: rgb(26,188,156);
     font-weight: 500;
     font-size: xx-large;
-    width: 500px;
+    max-width: 700px !important;
+    border-radius: 10px;
+    border: 5px solid rgba(44,62,80,255);
 }
+
 
 .col-result {
     display: flex;
