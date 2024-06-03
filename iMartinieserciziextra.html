@@ -1,0 +1,158 @@
+﻿<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz di Matematica e Geometria</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        .question {
+            margin-bottom: 20px;
+        }
+
+            .question h3 {
+                margin: 0;
+            }
+
+            .question label {
+                display: block;
+            }
+
+        .result {
+            margin-top: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>Quiz di Matematica e Geometria</h1>
+    <form id="quizForm">
+        <!-- Inizio domande -->
+        <div class="question">
+            <h3>1. Quanto fa 5 + 3?</h3>
+            <label><input type="radio" name="q1" value="a"> 6</label>
+            <label><input type="radio" name="q1" value="b"> 7</label>
+            <label><input type="radio" name="q1" value="c"> 8</label>
+            <label><input type="radio" name="q1" value="d"> 9</label>
+        </div>
+      
+       <div class="question">
+            <h3>2. Qual è il perimetro di un quadrato con lato di 4 cm?</h3>
+            <label><input type="radio" name="q2" value="a"> 12 cm</label>
+            <label><input type="radio" name="q2" value="b"> 16 cm</label>
+            <label><input type="radio" name="q2" value="c"> 18 cm</label>
+            <label><input type="radio" name="q2" value="d"> 20 cm</label>
+        </div>
+       
+        <div class="question">
+            <h3>3. Qual è il risultato di 12 ÷ 4?</h3>
+            <label><input type="radio" name="q3" value="a"> 2</label>
+            <label><input type="radio" name="q3" value="b"> 3</label>
+            <label><input type="radio" name="q3" value="c"> 4</label>
+            <label><input type="radio" name="q3" value="d"> 5</label>
+        </div>
+       
+        <div class="question">
+            <h3>4. Qual è l'area di un triangolo con base 5 cm e altezza 4 cm?</h3>
+            <label><input type="radio" name="q4" value="a"> 10 cm²</label>
+            <label><input type="radio" name="q4" value="b"> 15 cm²</label>
+            <label><input type="radio" name="q4" value="c"> 20 cm²</label>
+            <label><input type="radio" name="q4" value="d"> 25 cm²</label>
+        </div>
+       
+        <div class="question">
+            <h3>5. Qual è il volume di un cubo con lato di 3 cm?</h3>
+            <label><input type="radio" name="q5" value="a"> 9 cm³</label>
+            <label><input type="radio" name="q5" value="b"> 18 cm³</label>
+            <label><input type="radio" name="q5" value="c"> 27 cm³</label>
+            <label><input type="radio" name="q5" value="d"> 36 cm³</label>
+        </div>
+      
+        <div class="question">
+            <h3>6. Quanto fa 7 × 6?</h3>
+            <label><input type="radio" name="q6" value="a"> 42</label>
+            <label><input type="radio" name="q6" value="b"> 36</label>
+            <label><input type="radio" name="q6" value="c"> 48</label>
+            <label><input type="radio" name="q6" value="d"> 54</label>
+        </div>
+      
+        <div class="question">
+            <h3>7. Qual è la somma degli angoli interni di un triangolo?</h3>
+            <label><input type="radio" name="q7" value="a"> 90°</label>
+            <label><input type="radio" name="q7" value="b"> 180°</label>
+            <label><input type="radio" name="q7" value="c"> 270°</label>
+            <label><input type="radio" name="q7" value="d"> 360°</label>
+        </div>
+       
+        <div class="question">
+            <h3>8. Qual è il risultato di 15 - 9?</h3>
+            <label><input type="radio" name="q8" value="a"> 6</label>
+            <label><input type="radio" name="q8" value="b"> 7</label>
+            <label><input type="radio" name="q8" value="c"> 8</label>
+            <label><input type="radio" name="q8" value="d"> 9</label>
+        </div>
+       
+        <div class="question">
+            <h3>9. Qual è la diagonale di un quadrato con lato di 1 cm?</h3>
+            <label><input type="radio" name="q9" value="a"> 1 cm</label>
+            <label><input type="radio" name="q9" value="b"> 1,41 cm</label>
+            <label><input type="radio" name="q9" value="c"> 2 cm</label>
+            <label><input type="radio" name="q9" value="d"> 2,82 cm</label>
+        </div>
+       
+        <div class="question">
+            <h3>10. Qual è il valore di π (pi greco) approssimato a due decimali?</h3>
+            <label><input type="radio" name="q10" value="a"> 3,12</label>
+            <label><input type="radio" name="q10" value="b"> 3,14</label>
+            <label><input type="radio" name="q10" value="c"> 3,16</label>
+            <label><input type="radio" name="q10" value="d"> 3,18</label>
+        </div>
+        <!-- Fine domande -->
+        <!-- Pulsante per calcolo punteggio ottenuto-->
+        <button type="button" onclick="calcolaPunteggio()">Calcola Punteggio</button>
+    </form>
+    <div class="result" id="result"></div>
+
+    <script>// Creazione funzione per calcolare il punteggio
+        function calcolaPunteggio() {
+            // Oggetto con le risposte corrette
+            var risposteCorrette = {
+                q1: 'c',
+                q2: 'b',
+                q3: 'b',
+                q4: 'a',
+                q5: 'c',
+                q6: 'a',
+                q7: 'b',
+                q8: 'a',
+                q9: 'b',
+                q10: 'b'
+            };
+
+            let punteggio = 0;
+
+            
+            for (let i = 1; i <= 10; i++) {
+                
+                var domanda = `q${i}`;
+                //  Utilizzo del metodo document.querySelector() per selezionare gli elementi Quiz del DOM
+                var rispostaSelezionata = document.querySelector(`input[name="${domanda}"]:checked`);
+
+                // Se esiste una risposta selezionata e questa è corretta, incrementa il punteggio
+                if (rispostaSelezionata && rispostaSelezionata.value === risposteCorrette[domanda]) {
+                    punteggio++;
+                }
+            }
+
+            // Mostra il punteggio ottenuto
+            document.getElementById('result').innerText = `Hai risposto correttamente a ${punteggio} domande su 10.`;
+        }</script>
+    <footer>
+    <!--Inserimento Footer-->
+    </footer>
+</body>
+</html>
