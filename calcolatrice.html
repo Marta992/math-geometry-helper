@@ -9,7 +9,7 @@
     <script src="js/calcolatrice.js"></script>
     <title>calcolatrice</title>
 
-    
+
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <meta name="description" content="" />
     <meta name="author" content="" />
@@ -58,80 +58,80 @@
             <p class="masthead-subheading font-weight-light mb-0">Calcolatrice - Esegui tutti i calcoli di cui hai bisogno</p>
         </div>
     </header>
-    <div class="container text-center calculator-container mt-5">
-        <div class="row align-items-center">
-            <div class="col col-result" id="display">
-                0
+    <section>
+        <div class="container text-center calculator-container my-5">
+            <div class="row align-items-center">
+                <div class="col col-result" id="display">0</div>
+            </div>
+            <div class="row align-items-center">
+
+                <div class="col my-red" onclick="reset()">
+                    RESET
+                </div>
+
+            </div>
+            <div class="row align-items-center">
+                <div class="col light-gray" onclick="writeNumber(7)">
+                    7
+                </div>
+                <div class="col light-gray" onclick="writeNumber(8)">
+                    8
+                </div>
+                <div class="col light-gray" onclick="writeNumber(9)">
+                    9
+                </div>
+                <div class="col dimgray" onclick="writeSign('/')">
+                    /
+                </div>
+
+            </div>
+            <div class="row align-items-center">
+                <div class="col light-gray" onclick="writeNumber(4)">
+                    4
+                </div>
+                <div class="col light-gray" onclick="writeNumber(5)">
+                    5
+                </div>
+                <div class="col light-gray" onclick="writeNumber(6)">
+                    6
+                </div>
+                <div class="col dimgray" onclick="writeSign('X')">
+                    X
+                </div>
+
+            </div>
+            <div class="row align-items-center">
+                <div class="col light-gray" onclick="writeNumber(1)">
+                    1
+                </div>
+                <div class="col light-gray" onclick="writeNumber(2)">
+                    2
+                </div>
+                <div class="col light-gray" onclick="writeNumber(3)">
+                    3
+                </div>
+                <div class="col dimgray" onclick="writeSign('-')">
+                    -
+                </div>
+
+            </div>
+            <div class="row align-items-center">
+                <div class="col light-gray" onclick="writeComma()">
+                    ,
+                </div>
+                <div class="col light-gray" onclick="writeNumber(0)">
+                    0
+                </div>
+                <div class="col pink " onclick="calculate()">
+                    =
+                </div>
+                <div class="col dimgray" onclick="writeSign('+')">
+                    +
+                </div>
+
             </div>
         </div>
-        <div class="row align-items-center">
-
-            <div class="col my-red" onclick="reset()">
-                RESET
-            </div>
-
-        </div>
-        <div class="row align-items-center">
-            <div class="col light-gray" onclick="writeNumber(7)">
-                7
-            </div>
-            <div class="col light-gray" onclick="writeNumber(8)">
-                8
-            </div>
-            <div class="col light-gray" onclick="writeNumber(9)">
-                9
-            </div>
-            <div class="col dimgray" onclick="writeSign('/')">
-                /
-            </div>
-
-        </div>
-        <div class="row align-items-center">
-            <div class="col light-gray" onclick="writeNumber(4)">
-                4
-            </div>
-            <div class="col light-gray" onclick="writeNumber(5)">
-                5
-            </div>
-            <div class="col light-gray" onclick="writeNumber(6)">
-                6
-            </div>
-            <div class="col dimgray" onclick="writeSign('X')">
-                X
-            </div>
-
-        </div>
-        <div class="row align-items-center">
-            <div class="col light-gray" onclick="writeNumber(1)">
-                1
-            </div>
-            <div class="col light-gray" onclick="writeNumber(2)">
-                2
-            </div>
-            <div class="col light-gray" onclick="writeNumber(3)">
-                3
-            </div>
-            <div class="col dimgray" onclick="writeSign('-')">
-                -
-            </div>
-
-        </div>
-        <div class="row align-items-center">
-            <div class="col light-gray" onclick="writeComma()">
-                ,
-            </div>
-            <div class="col light-gray" onclick="writeNumber(0)">
-                0
-            </div>
-            <div class="col pink " onclick="calculate()">
-                =
-            </div>
-            <div class="col dimgray" onclick="writeSign('+')">
-                +
-            </div>
-
-        </div>
-    </div>
+    </section>
     <!-- Footer-->
     <footer class="footer text-center">
         <div class="container">
