@@ -1,7 +1,7 @@
-var currentCheckpoint = 1;
+var currentCheckpoint = 1; 
 
 function showQuestion(point) {
-    
+    // inizio domande
     if (point === currentCheckpoint) {
         var questionContainer = document.getElementById('question-container');
         var questionText = document.getElementById('question');
@@ -25,7 +25,7 @@ function showQuestion(point) {
         questionContainer.style.display = 'block';
     }
 }
-
+//inizio risposte
 function checkAnswer() {
     var answerInput = document.getElementById('answer').value.toLowerCase();
     var correctAnswer = '';
