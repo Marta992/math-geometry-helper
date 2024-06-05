@@ -13,7 +13,7 @@ function Triangolo() {
         // Uso var messaggio ("Per favore, inserisci valori numerici validi.");
         //Perimetro
         let Perimetro = AB + BC + AC;
-        messaggioperimetro.innerHTML = "Perimetro: " + Perimetro;
+        messaggioperimetro.innerHTML = "Perimetro: " + Perimetro.toFixed(2);
         //Area con calcolo tramite il teorema di Erone
         let s = Perimetro / 2;
         var Area = Math.sqrt(s * (s - AB) * (s - BC) * (s - AC));
@@ -45,7 +45,7 @@ function Rettangolo() {
         // Uso var messaggio ("Per favore, inserisci valori numerici validi.");
         //Perimetro
         let Perimetroret = 2 * (ABret + BCret);
-        messaggioperimetroret.innerHTML = "Perimetro: " + Perimetroret;
+        messaggioperimetroret.innerHTML = "Perimetro: " + Perimetroret.toFixed(2);
         //Calcolo area 
         let Arearet = ABret * BCret;
 
@@ -70,7 +70,7 @@ function Quadrato() {
 
         //Perimetro
         let Perimetroquad = 4 * ABquad;
-        messaggioperimetroquad.innerHTML = "Perimetro: " + Perimetroquad;
+        messaggioperimetroquad.innerHTML = "Perimetro: " + Perimetroquad.toFixed(2);
         //Calcolo area 
         let Areaquad = Math.pow(ABquad, 2);
         //Con Math pow fai l'elevazione a potenza
