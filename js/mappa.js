@@ -8,17 +8,17 @@ function showQuestion(point) {
         var answerInput = document.getElementById('answer');
 
         if (point === 1) {
-            questionText.textContent = "lato per lato, si trova l'area di quale figura geometrica?";
+            questionText.textContent = "Qual è l'unico numero primo pari? ";
         } else if (point === 2) {
             questionText.textContent = "Quanto fa 17 + 84?";
         } else if (point === 3) {
-            questionText.textContent = "quali sono...";
+            questionText.textContent = "Qual è il valore di Pi greco?";
         } else if (point === 4) {
-            questionText.textContent = "Quanto fa ...?";
+            questionText.textContent = "Come si chiama un angolo di 90°?";
         } else if (point === 5) {
-            questionText.textContent = "Quanto fa ...4?";
+            questionText.textContent = "Quanti lati ha un esagono?";
         } else if (point === 6) {
-            questionText.textContent = "Quanto fa ...?";
+            questionText.textContent = "2 - 3 - 5 - 8 - ?";
         }
 
         answerInput.value = '';
@@ -29,22 +29,29 @@ function showQuestion(point) {
 function checkAnswer() {
     var answerInput = document.getElementById('answer').value.toLowerCase();
     var correctAnswer = '';
+    var alternativeAnswer = '';
 
     if (currentCheckpoint === 1) {
-        correctAnswer = 'si';
+        correctAnswer = '2';
+        alternativeAnswer = 'due';
     } else if (currentCheckpoint === 2) {
-        correctAnswer = 'si';
+        correctAnswer = '101';
+        alternativeAnswer = 'centouno';
     }  else if (currentCheckpoint === 3) {
-        correctAnswer = 'si';  
+        correctAnswer = '3.14';  
+        alternativeAnswer = '3,14';
     } else if (currentCheckpoint === 4) {
-        correctAnswer = 'si';
+        correctAnswer = 'retto';
+        alternativeAnswer = 'angolo retto';
     }  else if (currentCheckpoint === 5) {
-        correctAnswer = 'si';
+        correctAnswer = 'sei';
+        alternativeAnswer = '6';
     } else if (currentCheckpoint === 6) {
-        correctAnswer = 'si';
+        correctAnswer = '12';
+        alternativeAnswer = 'dodici';
     }
 
-    if (answerInput === correctAnswer) {
+    if (answerInput === correctAnswer || answerInput == alternativeAnswer) {
         alert('Risposta corretta!');
         document.getElementById('question-container').style.display = 'none';
         document.getElementById('point' + currentCheckpoint).style.display = 'none';
