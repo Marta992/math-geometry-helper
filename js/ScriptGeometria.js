@@ -2,9 +2,9 @@
 
 function Triangolo() {
     //Salviamo tutti i valori e li convertiamo in interi
-    let AB = parseInt(document.getElementById("AB").value);
-    let BC = parseInt(document.getElementById("BC").value);
-    let AC = parseInt(document.getElementById("AC").value);
+    let AB = parseFloat(document.getElementById("AB").value);
+    let BC = parseFloat(document.getElementById("BC").value);
+    let AC = parseFloat(document.getElementById("AC").value);
     let messaggioperimetro = document.getElementById("perimetrotriangolo");
     let messaggioarea = document.getElementById("areatriangolo");
     /* Prima avevo messo questo controllo if (isNaN(AB) || isNaN(BC) || isNaN(AC)) etc..  ma cambianto la textbox ti constringe ad inserire solo numeri
@@ -35,8 +35,8 @@ function Triangolo() {
 
 function Rettangolo() {
     //Salviamo tutti i valori e li convertiamo in interi
-    let ABret = parseInt(document.getElementById("ABret").value);
-    let BCret = parseInt(document.getElementById("BCret").value);
+    let ABret = parseFloat(document.getElementById("ABret").value);
+    let BCret = parseFloat(document.getElementById("BCret").value);
     let messaggioperimetroret = document.getElementById("perimetrorettangolo");
     let messaggioarearet = document.getElementById("arearettangolo");
     /* Prima avevo messo questo controllo if (isNaN(AB) || isNaN(BC) || isNaN(AC)) etc..  ma cambianto la textbox ti constringe ad inserire solo numeri
@@ -63,7 +63,7 @@ function Rettangolo() {
 
 
 function Quadrato() {
-    let ABquad = parseInt(document.getElementById("ABquad").value);
+    let ABquad = parseFloat(document.getElementById("ABquad").value);
     let messaggioperimetroquad = document.getElementById("perimetroquad");
     let messaggioareaquad = document.getElementById("areaquad");
     if (ABquad >= 0) {
@@ -86,7 +86,7 @@ function Quadrato() {
 
 
 function Cerchio() {
-    let raggio = parseInt(document.getElementById("raggio").value);
+    let raggio = parseFloat(document.getElementById("raggio").value);
     let messaggioperimetrocerchio = document.getElementById("perimetrocerchio");
     let messaggioareacerchio = document.getElementById("areacerchio");
     if (raggio >= 0) {
